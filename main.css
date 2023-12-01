@@ -1,3 +1,6 @@
 body {
-  background-color: #f8f7ff;
+  background-color: red;
+
+  max-width: max-content;
+  margin: auto;
 }
