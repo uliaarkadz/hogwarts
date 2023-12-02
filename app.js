@@ -1,4 +1,19 @@
 $(() => {
+  const classes = [
+    { day: "Monday", classes: ["Herbology"] },
+    { day: "Tuesday", classes: ["Herbology", "Divination"] },
+    { day: "Wednsday", classes: ["History of Magic"] },
+    { day: "thursday", classes: ["Charms", "Potions"] },
+    {
+      day: "friday",
+      classes: [
+        "Transfiguration",
+        "Defense Against the Dark Arts",
+        "Quidditch practice",
+      ],
+    },
+  ];
+
   //create var container
   const $container = $("#container");
   console.log($container);
@@ -36,4 +51,15 @@ $(() => {
   $ul.append(
     "<li>Butter Beer</li><li class='secret'>Invisibility Cloak</li><li class='secret'>Magic Map</li><li class='secret'>Time Turner</li><li class='cat'>Leash</li><li>Bertie Bott's Every Flavor [Jelly] Beans</li>"
   );
+  //create var for table div container
+  const $classesTable = $("#classesTable");
+  console.log($classesTable);
+  const $table = $("<table>");
+  $classesTable.append($table);
+  //create headear
+  $table.append("<thead><th>Day</th><th>Classes</th></thead>");
+
+  classes.forEach((item) => {
+    $table.append(`<tr><td>${item.day}</td><td>${item.classes}</td></tr>`);
+  });
 });
