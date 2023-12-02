@@ -28,4 +28,12 @@ $(() => {
   $h4Wand.text("Holly Wand with Unicorn Hair Core");
   $container.append($h4Wand);
   console.log($h4Wand);
+
+  //add the following into an unordered list (with the attribute of storage and a value of trunk):
+  const $ul = $("<ul>");
+  $ul.attr("storage", "trunk");
+  $container.append($ul);
+  $ul.append(
+    "<li>Butter Beer</li><li class='secret'>Invisibility Cloak</li><li class='secret'>Magic Map</li><li class='secret'>Time Turner</li><li class='cat'>Leash</li><li>Bertie Bott's Every Flavor [Jelly] Beans</li>"
+  );
 });
