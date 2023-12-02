@@ -113,4 +113,17 @@ $(() => {
   //   Fix your pet's leash by removing the class of cabbage (be sure to keep your pet's leash's original class)
 
   $leash.toggleClass("cabbage");
+
+  //   Update your class schedule to read 'Fall 2018'
+
+  const $classSchedule = $("h5");
+  $classSchedule.text("Fall 2018");
+
+  //   Celebrate by buying more butter beer! Append a list item with the text 'Butter beer' as the first list item inside your unordered list with the value of trunk
+
+  $("<li>Butter beer</li>").insertBefore("ul li:first");
+
+  //   Whoops! You broke your trunk when you stood on it while singing karaoke. Get a new storage container for your stuff; replace the unodered list's property of trunk with a new property of chest
+
+  $ul.attr({ storage: "chest" });
 });
